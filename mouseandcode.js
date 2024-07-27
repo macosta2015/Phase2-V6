@@ -121,19 +121,19 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         copySketchFunction(editOptions3, newPage);
 
 
-        // Select sketch to click or unclick
-        console.log('Waiting 10 seconds.');
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
-        await newPage.evaluate(() => {
-            const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
-            if (thirdButton) {
-                thirdButton.click();
-                thirdButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-            } else {
-                console.error('Third button not found.');
-            }
-        });
-        console.log("Third button clicked and scrolled into view.");
+        // Select sketch to click or unclick, good code to select and unselect
+        // console.log('Waiting 10 seconds.');
+        // await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
+        // await newPage.evaluate(() => {
+        //     const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
+        //     if (thirdButton) {
+        //         thirdButton.click();
+        //         thirdButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        //     } else {
+        //         console.error('Third button not found.');
+        //     }
+        // });
+        // console.log("Third button clicked and scrolled into view.");
 
 
         console.log("MMMMMMMMM");
